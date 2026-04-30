@@ -1,10 +1,10 @@
+import Banner from '@/components/home/Banner';
 import { Button } from '@heroui/react';
 
 const Home = () => {
     return (
         <div>
-            <button className='btn bg-red-500 rounded-full'>Daisy UI</button>
-            <Button>Hero UI</Button>
+            <Banner />
         </div>
     );
 };
