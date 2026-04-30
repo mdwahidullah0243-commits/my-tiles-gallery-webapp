@@ -1,4 +1,5 @@
 import Banner from '@/components/home/Banner';
+import FeaturedTiles from '@/components/home/FeaturedTiles';
 import MarqueeContent from '@/components/home/MarqueeContent';
 import Marquee from 'react-fast-marquee';
 
@@ -14,6 +15,8 @@ const Home = () => {
                     <MarqueeContent />
                 </Marquee>
             </div>
+
+            <FeaturedTiles />
         </div>
     );
 };
