@@ -1,9 +1,12 @@
 'use client';
 
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -11,7 +14,27 @@ const Login = () => {
 
     const handleLoginFunc = async (formData) => {
         const { email, password } = formData;
-        console.log({ email, password });
+
+        const { data, error } = await authClient.signIn.email({
+            email: email,
+            password: password,
+            rememberMe: true,
+            callbackURL: "/",
+        });
+
+        if (error) {
+            toast.error(error.message);
+        };
+
+        if (data) {
+            toast.success('Sign In Successful!');
+        };
+    };
+
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
     };
 
     return (
@@ -27,6 +50,13 @@ const Login = () => {
                         Don’t have an account?
                         <Link href='/register' className="text-cyan-600"> Create an account</Link>
                     </p>
+
+                    <button
+                        onClick={handleGoogleSignIn}
+                        className="btn w-full text-lg text-slate-600 font-medium">
+                        <FcGoogle className="text-3xl" />
+                        Login with Google
+                    </button>
                 </div>
 
                 {/* divider */}

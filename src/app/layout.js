@@ -1,7 +1,11 @@
+import dns from "node:dns";
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 import Footer from "@/components/shared/Footer";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { Poppins } from 'next/font/google'
+import { ToastContainer } from "react-toastify";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,6 +25,9 @@ export default function RootLayout({ children }) {
       className={`h-full antialiased`}
     >
       <body className={`${poppins.className} min-h-full flex flex-col bg-[#F6F3F5]`}>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000} />
         <Navbar />
         {children}
         <Footer />
