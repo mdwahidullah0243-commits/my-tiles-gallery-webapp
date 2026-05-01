@@ -1,4 +1,4 @@
-import { copyrightLinks } from "@/lib/navItems";
+import { copyrightLinks } from "@/lib/data";
 import CopyrightLink from "../ui/CopyrightLink";
 
 const FooterBottomPart = () => {

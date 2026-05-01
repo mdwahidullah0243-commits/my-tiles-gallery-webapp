@@ -1,8 +1,8 @@
+import { getTiles } from "@/lib/data";
 import TileCard from "./TileCard";
 
 const FeaturedTiles = async () => {
-    const res = await fetch('http://localhost:5000/tiles');
-    const tiles = await res.json();
+    const tiles = await getTiles();
 
     return (
         <div className="my-25 w-11/12 mx-auto space-y-10">

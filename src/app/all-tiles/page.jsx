@@ -1,24 +1,22 @@
-import TileCard from "@/components/home/TileCard";
+import AllCardSection from "@/components/all-tiles-page/AllCardSection";
+import MySearchFeild from "@/components/all-tiles-page/MySearchFeild";
+import { getTiles } from "@/lib/data";
 
 const AllTilesPage = async () => {
-    const res = await fetch('http://localhost:5000/tiles');
-    const tiles = await res.json();
+    const tiles= await getTiles();
 
     return (
         <div className="w-11/12 mx-auto">
-            <h2 className='text-3xl font-bold text-cyan-500 text-center mt-10'>
-                This is All Tiles page
-            </h2>
+            <div className="mt-10 flex justify-between items-center">
+                <h2 className='text-3xl text-[#1b1b1b] font-bold'>
+                    All Collections
+                </h2>
 
-            <div className="grid grid-cols-4 gap-5 my-10">
-                {
-                    tiles.map(tile => {
-                        return (
-                            <TileCard key={tile.id} tile={tile} />
-                        )
-                    })
-                }
+                <MySearchFeild tiles={tiles} />
             </div>
+
+            {/* all card */}
+            <AllCardSection tiles={tiles} />
         </div>
     );
 };

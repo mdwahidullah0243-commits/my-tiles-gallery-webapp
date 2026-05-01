@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "../ui/NavLink";
-import { navItems } from "@/lib/navItems";
+import { navItems } from "@/lib/data";
 
 const Navbar = () => {
     // variable of nav items
