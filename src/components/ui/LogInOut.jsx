@@ -29,14 +29,14 @@ const LogInOut = () => {
 
                         <button
                             onClick={async () => await authClient.signOut()}
-                            className='btn bg-cyan-500 text-white text-lg font-medium px-6'>
+                            className='btn animate__bounceIn bg-cyan-500 text-white text-lg font-medium px-6'>
                             Logout
                         </button>
                     </div>
                     :
                     <div className='flex items-center gap-5'>
                         <Link href={'/login'}>
-                            <button className='btn bg-[#60a3bc] text-white text-lg font-medium px-6'>
+                            <button className='btn animate__bounceIn bg-[#60a3bc] text-white text-lg font-medium px-6'>
                                 Login
                             </button>
                         </Link>

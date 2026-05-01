@@ -15,7 +15,7 @@ const Banner = () => {
                     </h2>
 
                     <Link href={'/all-tiles'}>
-                        <button className="btn bg-[#080000] text-white text-2xl font-medium py-3 px-8 h-auto rounded-xl hover:bg-[#CE8E78]">
+                        <button className="btn animate__heartBeat animate-spin hover:animate-none bg-[#080000] text-white text-2xl font-medium py-3 px-8 h-auto rounded-xl hover:bg-[#CE8E78]">
                             Browse Now
                         </button>
                     </Link>
