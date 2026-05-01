@@ -83,7 +83,8 @@ const Register = () => {
                         <input
                             type="url"
                             {...register('photoURL', { required: 'Photo URL feild is required' })}
-                            className="input bg-slate-200" placeholder="Enter your email address"
+                            className="input bg-slate-200" 
+                            placeholder="Enter your photo URL address"
                         />
                         {errors.photoURL && <p className="text-red-500">{errors.photoURL.message}</p>}
                     </fieldset>
@@ -94,7 +95,8 @@ const Register = () => {
                         <input
                             type="email"
                             {...register('email', { required: 'Email feild is required' })}
-                            className="input bg-slate-200" placeholder="Enter your email address"
+                            className="input bg-slate-200" 
+                            placeholder="Enter your email address"
                         />
                         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                     </fieldset>

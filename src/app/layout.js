@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
       lang="en"
       data-theme="light"
       className={`h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className={`${poppins.className} min-h-full flex flex-col bg-[#F6F3F5]`}>
         <ToastContainer

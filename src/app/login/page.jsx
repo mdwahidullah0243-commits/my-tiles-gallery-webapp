@@ -68,7 +68,8 @@ const Login = () => {
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-[#403F3F] text-base font-semibold">Email address</legend>
                         <input
-                            type="email" {...register('email', { required: 'Email feild is required' })}
+                            type="email" 
+                            {...register('email', { required: 'Email feild is required' })}
                             className="input bg-slate-200" placeholder="Enter your email address"
                         />
                         {errors.email && <p className="text-red-500">{errors.email.message}</p>}

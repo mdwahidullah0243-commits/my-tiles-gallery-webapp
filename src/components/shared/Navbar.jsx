@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLink from "../ui/NavLink";
 import { navItems } from "@/lib/data";
+import LogInOut from "../ui/LogInOut";
 
 const Navbar = () => {
     // variable of nav items
@@ -40,9 +41,7 @@ const Navbar = () => {
 
                 {/* Login & Logout  */}
                 <div className="navbar-end">
-                    <Link href={'/login'} className="btn bg-purple-700 text-white">
-                        Login
-                    </Link>
+                    <LogInOut />
                 </div>
             </div>
         </div>
