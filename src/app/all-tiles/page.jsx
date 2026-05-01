@@ -3,7 +3,7 @@ import MySearchFeild from "@/components/all-tiles-page/MySearchFeild";
 import { getTiles } from "@/lib/data";
 
 const AllTilesPage = async () => {
-    const tiles= await getTiles();
+    const tiles = await getTiles();
 
     return (
         <div className="w-11/12 mx-auto">

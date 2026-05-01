@@ -38,3 +38,10 @@ export const getTiles = async () => {
 
     return data;
 };
+
+export const getTileById = async (id) => {
+    const res = await fetch(`http://localhost:5000/tiles/${id}`);
+    const data = await res.json();
+
+    return data;
+}
