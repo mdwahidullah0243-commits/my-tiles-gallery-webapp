@@ -8,7 +8,6 @@ import { FaUserCircle } from "react-icons/fa";
 const LogInOut = () => {
     const { data, isPending } = authClient.useSession();
     const user = data?.user;
-    console.log(user);
 
     if (isPending) {
         return <p className="text-xl font-medium">Loading...</p>;

@@ -11,7 +11,6 @@ import { MdOutlineEmail } from "react-icons/md";
 const MyProfilePage = () => {
     const { data, isPending } = authClient.useSession();
     const user = data?.user;
-    console.log(user);
 
     if (isPending) {
         return <MyLoading />
