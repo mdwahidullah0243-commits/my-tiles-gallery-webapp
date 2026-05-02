@@ -6,7 +6,7 @@ import TileCard from "../home/TileCard";
 const AllCardSection = ({ tiles }) => {
 
     return (
-        <div className="grid grid-cols-4 gap-5 my-10">
+        <div className="all-tiles-page grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 mb-20">
             {
                 tiles.map(tile => {
                     return (

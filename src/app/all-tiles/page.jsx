@@ -7,8 +7,8 @@ const AllTilesPage = async () => {
 
     return (
         <div className="w-11/12 mx-auto">
-            <div className="mt-10 flex justify-between items-center">
-                <h2 className='text-3xl text-[#1b1b1b] font-bold'>
+            <div className="mt-10 flex max-sm:flex-col justify-between items-center gap-5">
+                <h2 className='max-sm:text-2xl text-3xl text-[#2c2c2c] font-bold'>
                     All Collections
                 </h2>
 

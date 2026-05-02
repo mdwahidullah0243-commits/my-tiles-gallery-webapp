@@ -1,5 +1,7 @@
 'use client';
 
+import LeftSideShape from "@/components/login-register-page/LeftSideShape";
+import RightSideShape from "@/components/login-register-page/RightSideShape";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useState } from "react";
@@ -38,8 +40,10 @@ const Login = () => {
     };
 
     return (
-        <div className="flex justify-center">
-            <div className="bg-white p-10 space-y-5 rounded-xl">
+        <div className="flex justify-center gap-40 my-15">
+            <LeftSideShape />
+
+            <div className="bg-white p-10 space-y-6 rounded-xl">
                 {/* heading */}
                 <div className="text-center space-y-3">
                     <h2 className='text-[#403F3F] font-semibol text-3xl'>
@@ -48,12 +52,12 @@ const Login = () => {
 
                     <p className="text-slate-500">
                         Don’t have an account?
-                        <Link href='/register' className="text-cyan-600"> Create an account</Link>
+                        <Link href='/register' className="text-cyan-600 font-medium"> Create an account</Link>
                     </p>
 
                     <button
                         onClick={handleGoogleSignIn}
-                        className="btn w-full text-lg text-slate-600 font-medium">
+                        className="btn hover:rounded-full w-full text-lg text-slate-600 font-medium">
                         <FcGoogle className="text-3xl" />
                         Login with Google
                     </button>
@@ -68,7 +72,7 @@ const Login = () => {
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-[#403F3F] text-base font-semibold">Email address</legend>
                         <input
-                            type="email" 
+                            type="email"
                             {...register('email', { required: 'Email feild is required' })}
                             className="input bg-slate-200" placeholder="Enter your email address"
                         />
@@ -85,7 +89,7 @@ const Login = () => {
                             className="input bg-slate-200"
                             placeholder="Enter your password" />
 
-                        <span onClick={() => setShowPassword(!showPassword)} className="text-xl absolute right-2 top-3/12 cursor-pointer">
+                        <span onClick={() => setShowPassword(!showPassword)} className="text-xl absolute right-10 top-3/12 cursor-pointer">
                             {
                                 showPassword ? <FaEye /> : <FaEyeSlash />
                             }
@@ -97,11 +101,13 @@ const Login = () => {
                     </fieldset>
 
                     {/* login button */}
-                    <button type="submit" className="btn bg-[#403F3F] w-full text-white mt-5">
+                    <button type="submit" className="btn py-2 h-auto text-lg hover:bg-green-700 rounded-full bg-[#403F3F] w-full text-white mt-5">
                         Login
                     </button>
                 </form>
             </div>
+
+            <RightSideShape />
         </div>
     );
 };

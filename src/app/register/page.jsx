@@ -1,5 +1,7 @@
 'use client';
 
+import LeftSideShape from "@/components/login-register-page/LeftSideShape";
+import RightSideShape from "@/components/login-register-page/RightSideShape";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -40,8 +42,10 @@ const Register = () => {
     };
 
     return (
-        <div className="flex justify-center">
-            <div className="bg-white p-10 my-15 space-y-4 rounded-xl">
+        <div className="flex justify-center gap-40 my-15">
+            <LeftSideShape />
+
+            <div className="bg-white p-10 space-y-6 rounded-xl">
                 {/* Heading */}
                 <div className="text-center space-y-3">
                     <h2 className='text-[#403F3F] font-semibol text-3xl'>
@@ -50,12 +54,12 @@ const Register = () => {
 
                     <p className="text-slate-500">
                         Already have an account?
-                        <Link href='/login' className="text-cyan-600"> Sign In</Link>
+                        <Link href='/login' className="text-cyan-600 font-medium"> Sign In</Link>
                     </p>
 
                     <button
                         onClick={handleGoogleSignIn} 
-                        className="btn w-full text-lg text-slate-600 font-medium">
+                        className="btn hover:rounded-full w-full text-lg text-slate-600 font-medium">
                         <FcGoogle className="text-3xl" />
                         Login with Google
                     </button>
@@ -129,11 +133,13 @@ const Register = () => {
                     </div>
 
                     {/* register button for form submit*/}
-                    <button className="btn bg-[#403F3F] w-full text-white mt-5">
+                    <button type="submit" className="btn h-auto py-2 hover:bg-green-700 rounded-full text-lg bg-[#403F3F] w-full text-white mt-5">
                         Register
                     </button>
                 </form>
             </div>
+
+            <RightSideShape />
         </div>
     );
 };

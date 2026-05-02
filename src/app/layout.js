@@ -4,6 +4,7 @@ dns.setServers(['8.8.8.8', '8.8.4.4']);
 import Footer from "@/components/shared/Footer";
 import "./globals.css";
 import 'animate.css';
+import './responsive.css';
 import Navbar from "@/components/shared/Navbar";
 import { Poppins } from 'next/font/google'
 import { ToastContainer } from "react-toastify";

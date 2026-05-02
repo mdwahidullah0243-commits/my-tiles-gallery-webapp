@@ -1,33 +1,43 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "../ui/NavLink";
 import { navItems } from "@/lib/data";
 import LogInOut from "../ui/LogInOut";
+import { FiMenu } from "react-icons/fi";
+import { authClient } from "@/lib/auth-client";
 
 const Navbar = () => {
+    const { data, isPending } = authClient.useSession();
+    const user = data?.user;
+
+    if(isPending) {
+        return <p className="text-center">Please wait...</p>
+    }
     // variable of nav items
     const links = navItems.map(link => <NavLink key={link.id} link={link} />);
 
     return (
         <div className="shadow-sm bg-[#F6F3F5]">
-            <div className="navbar w-11/12 mx-auto">
-                <div className="navbar-start">
-                    <div className="dropdown">
+            <div className="navbar max-sm:flex-row-reverse w-11/12 mx-auto">
+                <div className={`${user ? 'session-menu' : 'not-session-menu'} navbar-start`}>
+                    <div className="dropdown dropdown-end sm:dropdown-start">
                         {/* humbergur menu icon */}
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        <div tabIndex={0} role="button" className="btn justify-end btn-ghost lg:hidden">
+                            <FiMenu className="text-2xl" />
                         </div>
 
                         {/* NavItems */}
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 max-sm:w-40 p-2 shadow">
                             {links}
                         </ul>
                     </div>
 
                     {/* logo */}
-                    <Link href='/' className="btn btn-ghost text-xl h-auto">
+                    <Link href='/' className="hidden sm:block btn btn-ghost text-xl h-auto">
                         <Image src='https://i.ibb.co.com/BVt0Y7RQ/tiles-logo.png' alt="Tiles Gallery Logo" width={150} height={50}></Image>
                     </Link>
                 </div>
@@ -41,7 +51,7 @@ const Navbar = () => {
 
                 {/* Login & Logout  */}
                 <div className="navbar-end">
-                    <LogInOut />
+                    <LogInOut user={user} />
                 </div>
             </div>
         </div>

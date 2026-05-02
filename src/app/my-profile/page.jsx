@@ -17,8 +17,8 @@ const MyProfilePage = () => {
     }
 
     return (
-        <div className="w-11/12 mx-auto my-15">
-            <div className="w-200 mx-auto flex justify-center items-center gap-3 bg-white shadow-sm p-10 rounded-2xl">
+        <div className="my-profile w-11/12 mx-auto my-15 sm:px-20 md:px-30 lg:px-40 xl:px-50">
+            <div className="w-full mx-auto flex flex-col lg:flex-row justify-center items-center gap-5 bg-white shadow-sm p-10 rounded-2xl">
                 <div>
                     <Image
                         src={user?.image}
@@ -30,7 +30,7 @@ const MyProfilePage = () => {
 
                 <div className="space-y-3">
                     <div className="w-80">
-                        <TextField className="w-full" name="name" type="text">
+                        <TextField className="input-feild w-full" name="name" type="text">
                             <Label className="flex items-center gap-2 text-base">
                                 <FaRegUser />
                                 <span>Full Name</span>
@@ -40,7 +40,7 @@ const MyProfilePage = () => {
                     </div>
 
                     <div className="w-80">
-                        <TextField className="w-full" name="name" type="text">
+                        <TextField className="input-feild w-full" name="name" type="text">
                             <Label className="flex items-center gap-2 text-base">
                                 <MdOutlineEmail />
                                 <span>Email</span>

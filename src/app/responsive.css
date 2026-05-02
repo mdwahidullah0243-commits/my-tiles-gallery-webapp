@@ -1,0 +1,78 @@
+@media (min-width: 340px) and (max-width: 499px) {
+
+    .featured-tiles,
+    .all-tiles-page {
+        width: calc(10 / 12 * 100%);
+        margin-inline: auto;
+    }
+
+    .featured-title {
+        font-size: 24px;
+    }
+
+    .copyright-part-2 {
+        flex-direction: column;
+    }
+
+    .logInOut-false-part {
+        gap: 10;
+    }
+
+    .session-menu {
+        justify-content: end;
+    }
+
+    .not-session-menu {
+        justify-content: end;
+    }
+
+    .tile-details-img {
+        height: 200px;
+    }
+
+    @media (min-width:340px) and (max-width:400px) {
+        .not-session-menu {
+            justify-content: start;
+        }
+
+        .logInOut-false-part {
+            gap: 50;
+        }
+
+        .input-feild {
+            padding-inline: 20px;
+        }
+        .update-btn {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 639px) {
+
+    .featured-tiles,
+    .all-tiles-page {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: 20px;
+    }
+
+    .featured-title {
+        font-size: 32px;
+    }
+
+    .session-menu {
+        justify-content: end;
+    }
+
+    .not-session-menu {
+        justify-content: end;
+    }
+
+    .tile-details-img {
+        height: 250px;
+    }
+
+    .my-profile {
+        padding-inline: 40px;
+    }
+}

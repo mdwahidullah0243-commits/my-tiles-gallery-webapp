@@ -23,8 +23,8 @@ const MySearchFeild = ({ tilesData }) => {
                         name="search"
                         onChange={(event) => setSearchValue(event.target.value)}
                         aria-label="Search"
-                        className="w-60"
-                        placeholder="Search for tiles by title..."
+                        className="w-45"
+                        placeholder="Search title name"
                     />
                     <SearchField.ClearButton />
                     <Button type="submit" className='bg-[#CE8E78] rounded-xl'>

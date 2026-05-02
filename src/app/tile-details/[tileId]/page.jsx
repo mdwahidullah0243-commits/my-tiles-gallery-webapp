@@ -11,20 +11,22 @@ const TileDetails = async ({ params }) => {
 
     return (
         <div className="w-11/12 mx-auto my-15">
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 space-y-8">
                 {/* Tile Preview */}
-                <div className="flex justify-center">
+                
+                <div className="flex lg:justify-center">
                     <Image
                         src={tile.image}
                         alt={tile.title}
                         width={300}
                         height={300}
-                        className="w-125 h-125 rounded-xl"
+                        className="tile-details-img w-125 sm:h-75 md:h-100 lg:h-125 max-lg:w-full rounded-xl"
                     />
                 </div>
 
                 {/* Information of the Tile */}
-                <div>
+                
+                <div className="">
                     {/* info-part-1 */}
                     <InfoTopPart tile={tile} />
 
