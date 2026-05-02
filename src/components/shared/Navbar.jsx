@@ -13,7 +13,7 @@ const Navbar = () => {
     const user = data?.user;
 
     if(isPending) {
-        return <p className="text-center">Please wait...</p>
+        return <p className="text-center font-medium py-5">One moment please...</p>
     }
     // variable of nav items
     const links = navItems.map(link => <NavLink key={link.id} link={link} />);

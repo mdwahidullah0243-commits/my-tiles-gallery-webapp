@@ -4,6 +4,18 @@ import TileTags from "@/components/tile-details-page/TileTags";
 import { getTileById } from "@/lib/data";
 import Image from "next/image";
 
+export const generateMetadata = async ({ params }) => {
+    const { tileId } = await params;
+
+    const tile = await getTileById(tileId);
+
+    return {
+        title: `Tiles Gallery || ${tile.title}`,
+        description: tile.description,
+    }
+}
+
+
 const TileDetails = async ({ params }) => {
     const { tileId } = await params;
 
@@ -13,7 +25,7 @@ const TileDetails = async ({ params }) => {
         <div className="w-11/12 mx-auto my-15">
             <div className="grid grid-cols-1 lg:grid-cols-2 space-y-8">
                 {/* Tile Preview */}
-                
+
                 <div className="flex lg:justify-center">
                     <Image
                         src={tile.image}
@@ -25,7 +37,7 @@ const TileDetails = async ({ params }) => {
                 </div>
 
                 {/* Information of the Tile */}
-                
+
                 <div className="">
                     {/* info-part-1 */}
                     <InfoTopPart tile={tile} />
@@ -46,7 +58,7 @@ const TileDetails = async ({ params }) => {
                     <TileTags tile={tile} />
 
                     {/* info-part-4 */}
-                    <Dimensions tile={tile}/>
+                    <Dimensions tile={tile} />
                 </div>
             </div>
         </div>
