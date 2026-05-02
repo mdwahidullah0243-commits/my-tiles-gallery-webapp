@@ -1,4 +1,4 @@
-T# 🧩 Project Name: Tiles Gallery
+# 🧩 Project Name: Tiles Gallery
 
 ## 📌 Project Overview
 **Tiles Gallery** is a modern web application built with Next.js that allows users to explore, view, and manage a visually appealing collection of tiles/images. It focuses on clean UI, smooth user experience, and dynamic interactions.
@@ -45,5 +45,5 @@ The purpose of this project is to:
 
 ---
 
-## 📦 NPM Packages Used
+## 📦 NPM Package Used from Requirement
 - Animate.css
