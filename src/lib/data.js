@@ -33,14 +33,14 @@ export const copyrightLinks = [
 
 
 export const getTiles = async () => {
-    const res = await fetch('http://localhost:5000/tiles');
+    const res = await fetch('https://tiles-gallery-api-i46o.onrender.com/tiles');
     const data = await res.json();
 
     return data;
 };
 
 export const getTileById = async (id) => {
-    const res = await fetch(`http://localhost:5000/tiles/${id}`);
+    const res = await fetch(`https://tiles-gallery-api-i46o.onrender.com/tiles/${id}`);
     const data = await res.json();
 
     return data;
