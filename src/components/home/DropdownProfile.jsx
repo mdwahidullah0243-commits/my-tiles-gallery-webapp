@@ -11,7 +11,7 @@ const DropdownProfile = ({ user }) => {
                 <Image src={user.image} alt={user?.name} width={50} height={50} className='rounded-full w-10 h-10' />
             </div>
 
-            <div tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 space-y-3 p-2 shadow-sm">
+            <div tabIndex="-1" className="sm:hidden dropdown-content menu bg-base-100 rounded-box z-1 w-52 space-y-3 p-2 shadow-sm">
                 {/* logo */}
                 <Link href='/' className="btn btn-ghost text-xl h-auto">
                     <Image src='https://i.ibb.co.com/BVt0Y7RQ/tiles-logo.png' alt="Tiles Gallery Logo" width={100} height={50}></Image>

@@ -9,9 +9,9 @@ const Home = () => {
             <Banner />
 
             <div className='bg-red-100 space-x-8 py-3 px-5 flex items-center '>
-                <button className='btn text-white bg-[#D72050] text-xl font-medium'>Latest</button>
+                <button className='btn text-white bg-[#89c401] text-xl font-medium'>Latest</button>
                 
-                <Marquee>
+                <Marquee pauseOnHover={true} speed={100}>
                     <MarqueeContent />
                 </Marquee>
             </div>

@@ -21,7 +21,7 @@ const Login = () => {
             email: email,
             password: password,
             rememberMe: true,
-            callbackURL: "/",
+            callbackURL: "/my-profile",
         });
 
         if (error) {
@@ -89,7 +89,7 @@ const Login = () => {
                             className="input bg-slate-200"
                             placeholder="Enter your password" />
 
-                        <span onClick={() => setShowPassword(!showPassword)} className="text-xl absolute right-10 top-3/12 cursor-pointer">
+                        <span onClick={() => setShowPassword(!showPassword)} className="password-eye text-xl absolute right-10 top-3/12 cursor-pointer">
                             {
                                 showPassword ? <FaEye /> : <FaEyeSlash />
                             }

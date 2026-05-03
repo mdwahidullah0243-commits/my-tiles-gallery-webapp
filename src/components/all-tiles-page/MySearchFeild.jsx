@@ -3,15 +3,15 @@
 import { Button, Form, SearchField } from "@heroui/react";
 import { useState } from "react";
 
-const MySearchFeild = () => {
+const MySearchFeild = ({ tiles, setAllTiles }) => {
     const [searchValue, setSearchValue] = useState('');
 
     const handleSearch = (event) => {
         event.preventDefault();
 
-        // const filteredTiles = tiles.filter(tile => tile.title.toLowerCase().includes(searchValue.toLowerCase()));
+        const filteredTiles = tiles.filter(tile => tile.title.toLowerCase().includes(searchValue.toLowerCase()));
 
-        // console.log(filteredTiles);
+        setAllTiles(filteredTiles)
     };
 
     return (

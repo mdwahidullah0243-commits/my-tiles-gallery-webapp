@@ -115,7 +115,7 @@ const Register = () => {
                             className="input bg-slate-200"
                             placeholder="Enter your password" />
 
-                        <span onClick={() => setShowPassword(!showPassword)} className="text-xl absolute right-5 top-3/12 cursor-pointer">
+                        <span onClick={() => setShowPassword(!showPassword)} className="password-eye text-xl absolute right-5 top-3/12 cursor-pointer">
                             {
                                 showPassword ? <FaEye /> : <FaEyeSlash />
                             }

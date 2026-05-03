@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
 import DropdownProfile from "../home/DropdownProfile";
-import { FiMenu } from "react-icons/fi";
 
 const LogInOut = ({ user }) => {
     return (

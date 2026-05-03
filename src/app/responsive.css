@@ -29,6 +29,12 @@
     .tile-details-img {
         height: 200px;
     }
+    .empty-heading {
+        font-size: 16px;
+    }
+    .empty-p {
+        font-size: 14px;
+    } 
 
     @media (min-width:340px) and (max-width:400px) {
         .not-session-menu {
@@ -42,8 +48,12 @@
         .input-feild {
             padding-inline: 20px;
         }
+
         .update-btn {
             margin-left: 20px;
+        }
+        .password-eye {
+            right: 20px;
         }
     }
 }
@@ -75,4 +85,10 @@
     .my-profile {
         padding-inline: 40px;
     }
+    .empty-heading {
+        font-size: 20px;
+    }
+    .empty-p {
+        font-size: 16px;
+    } 
 }

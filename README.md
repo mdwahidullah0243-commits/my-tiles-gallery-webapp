@@ -15,8 +15,7 @@ The purpose of this project is to:
 ---
 
 ## 🌐 Live URL
-🔗 https://your-live-site-url.com  
-*(Replace with your deployed link)*
+🔗 https://my-tiles-gallery-webapp.vercel.app
 
 ---
 
